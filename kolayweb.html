@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> 
+        <meta property="og:title" content="Kolay"/> 
+        <meta property="og:type" content="website"/> 
+        <meta property="og:url" content="https://kolayapp.com.tr"/> 
+        <meta property="og:image" content="https://i.imgur.com/RUTWURi.png"/> 
+        <meta property="og:description" content="KOLAY özel ders hizmeti veren öğretmenler ve özel ders hizmeti alan öğrenciler için yardım asistanıdır. Kolay sayesinde öğretmenler ders takibi, ödeme takibi, ödev takibi gibi zahmetli işleri uygulama aracılığıyla kolayca hallediyorlar."/> 
+        <meta name="theme-color" content="#47A851"> 
+        <meta name="twitter:card" content="https://i.imgur.com/RUTWURi.png"> 
+        <meta charset="utf-8"> 
+        <title>Lewa Web | Template</title> 
+        <link rel="icon" type="image/x-icon" href="/assets/img/logo.png"> 
+        <script src="https://cdn.tailwindcss.com"></script> 
+        <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script> 
+        <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet"> 
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script> 
+        <link rel="stylesheet" href="@sweetalert2/themes/dark/dark.css"> 
+        <script src="sweetalert2/dist/sweetalert2.min.js"></script> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet"> 
+        <script>
+            tailwind.config={darkMode: 'class', theme:{extend:{colors:{primary:{"50":"#47A851","100":"#47A851","200":"#47A851","300":"#fff","400":"#47A851","500":"#47A851","600":"#47A851","700":"#47A851","800":"#47A851","900":"#47A851"}, gray:{"800":"#111","900":"#111","1000":"#f7931a","1100":"#f0417d"}}}, fontFamily:{'body': [ 'Montserrat', 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'], 'sans': [ 'Montserrat', 'Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji']}}}
+        </script>
+        <script>
+            if (localStorage.getItem('color-theme')==='dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}else{document.documentElement.classList.remove('dark')}
+        </script>
+        <style>
+            html{scroll-behavior: smooth; -moz-transition: all 2s; -webkit-transition: all 2s; transition: all 2s;}
+            ::-webkit-scrollbar{width: 5px; height: 10px !important;}
+            ::-webkit-scrollbar-track{box-shadow: inset 0 0 20px #111; border-radius: 10px;}
+            ::-webkit-scrollbar-thumb{border-radius: 10px; box-shadow: inset 0 0 20px #111;}
+            html, body{overflow-x: hidden;}
+            body{position: relative}
+        </style>
+            
+        </head>
+        <body> 
+            <header> 
+                <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800"> 
+                    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"> 
+                        <a href="https://kolayapp.com.tr" class="flex items-center"> 
+                            <img src="assets/img/favicon.png" class="mr-3 h-6 sm:h-6 md:h-6 lg:h-10 xl:h-10" alt="Kolay Logo"/> 
+                        </a> 
+                            <div class="flex items-center lg:order-2"> 
+                                <a href="#team" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-1 lg:px-1.5 py-1.5 lg:py-2 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Ekibimiz</a> 
+                                <a href="#info" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-1 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Bilgi al</a>
+                                 <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"> 
+                                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                                    </svg> 
+                                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                                    </svg> 
+                                </button> 
+                                <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false"> <span class="sr-only">Kolay</span> 
+                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                                    </svg> 
+                                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg> 
+                            </button> 
+                        </div>
+                        <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2"> 
+                            <ul class="flex flex-col mt-4 font-semibold lg:flex-row lg:space-x-8 lg:mt-0"> 
+                                <li> 
+                                    <a href="/" class="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white" aria-current="page">Ana Sayfa</a> 
+                                </li>
+                                <li> 
+                                    <a href="#faq" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">S.S.S</a> 
+                                </li>
+                            </ul> 
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <section class="bg-white dark:bg-gray-900"> 
+                <div class="delay-[600ms] duration-[1000ms] [animation-iteration-count:infinite] taos:translate-y-[200px] taos:opacity-0 grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"> 
+                    <div class="mr-auto place-self-center lg:col-span-7"> 
+                        <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"> Bu web sayfası şahsıma (<span class="text-transparent bg-clip-text bg-gradient-to-r to-green-600 from-green-400"> Lewafuse</span>) ait değildir</h1> <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Pek bi amacım yok, css kodları vs bana ait değil. Öylesine paylaştım.</p>
+                        <a href="#info" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base text-white bg-gradient-to-r from-green-500 via-green-600 to-green-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"> Bilgi al <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path> 
+                        </svg> 
+                    </a> 
+                    <a href="#team" class="inline-flex items-center justify-center px-5 py-3 mt-2 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"> Ekibimiz </a> 
+                </div>
+                <div class="hidden lg:mt-0 lg:col-span-3 lg:flex"> 
+                    <img src="assets/img/mockup.png" alt="mockup"> 
+                </div>
+            </div>
+        </section>
+        <section class="bg-white dark:bg-gray-900" id="info"> 
+            <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6"> 
+                <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400"> 
+                    <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Lewa <span class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r to-green-600 from-green-400">Açıklama</span></h2> 
+                    <p class="mb-4 font-light">Bu web template şahsıma ait değildir!(Lewafuse) Bu web siteyi bir yerden buldum ve biraz editledim.</p>
+                    <p class="mb-4 font-medium">Kodlama kısmı ve css şahsıma ait değildir. Zaten asıl sahiplerinin fotoğraf ve hesapları aşağıda bulunuyor.</p>
+                    <a href="#app" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700"> Uygulamayı edinin <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> 
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path> 
+                    </svg> 
+                </a> 
+            </div>
+        </div>
+    </section>
+    <section class="bg-white dark:bg-gray-900"> 
+        <div class="delay-[600ms] duration-[1000ms] [animation-iteration-count:infinite] taos:translate-y-[200px] taos:opacity-0 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"> 
+            <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400"> 
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r to-green-600 from-green-400">Kolayın</span> Geleceği</h2> <p class="mb-4">Kolay sunduğu çözümler ve yenilikçi hizmet yöntemleriyle özel ders sektörünün en çok kullanılan uygulaması olacaktır. Ayrıca Türkiye Pazarında yer edindikten sonra Avrupa ve Amerika Pazarına açılmayı hedeflemekteyiz. Yaptığımız araştırmalar bize buralardaki özel ders sektöründe de Kolay'a ihtiyaç olduğunu gösteriyor.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mt-8"> 
+                    <img class="w-full rounded-lg" src="assets/img/photo_1.png" alt="office content 1"> 
+                    <img class="mt-4 w-full lg:mt-10 rounded-lg" src="assets/img/photo_2.png" alt="office content 2"> 
+                </div>
+            </div>
+            <div id="app" class="delay-[600ms] duration-[1000ms] [animation-iteration-count:infinite] taos:translate-y-[200px] taos:opacity-0 w-full p-4 text-center bg-white rounded-lg sm:p-8 dark:bg-gray-800 dark:border-gray-700"> 
+                <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">Her yerden hızlıca kullanın <span class="bg-green-100 text-green-800 text-xl font-medium mr-2 px-5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">YAKINDA</span> 
+                </h5> 
+                <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">iOS ve Android'de <span class="text-transparent bg-clip-text bg-gradient-to-r to-green-600 from-green-400">KOLAY</span>, Uygulamayı şimdi indirin.</p>
+                
+                <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4"> 
+                    <a href="#" class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"> 
+                        <svg class="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="apple" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"> 
+                            <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"> </path> 
+                        </svg> <div class="text-left"> 
+                            <div class="-mt-1 font-sans text-sm font-semibold">App Store'dan</div>
+                            <div class="mb-1 text-xs">İndirin</div>
+                        </div>
+                    </a> 
+                    <a href="#" class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"> 
+                        <svg class="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> 
+                            <path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"> </path> </svg> 
+                            <div class="text-left"> 
+                                <div class="-mt-1 font-sans text-sm font-semibold">Google Play</div><div class="mb-1 text-xs">'DEN ALIN</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section> 
+            <section class="bg-white dark:bg-gray-900" id="team"> 
+                <div class="delay-[600ms] duration-[1000ms] [animation-iteration-count:infinite] taos:translate-y-[200px] taos:opacity-0 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6"> 
+                    <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16"> 
+                        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Ekibimizle Tanışın</h2> 
+                        <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400"><span class="text-transparent bg-clip-text bg-gradient-to-r to-green-600 from-green-400">KOLAY</span> Girişiminin sanatçılarıyla tanışın.</p></div>
+                        
+                        <div class="grid gap-8 lg:gap-16 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4"> 
+                            <div class="text-center text-gray-500 dark:text-gray-400"> 
+                                <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="assets/img/sami.jpg" alt="Avatar"> 
+                                <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> <a href="https://www.linkedin.com/in/samiayan/">Sami</a></h3> <p>Yönetici</p>
+                                
+
+                                <ul class="flex justify-center mt-4 space-x-4"> 
+                                    <li> <a href="https://www.linkedin.com/in/samiayan/" class="m-2 text-[#0C64C5] hover:text-gray-900 dark:hover:text-white"> <i class="bi-linkedin"></i> </a> 
+                                    </li>
+                                </ul> 
+                            </div>
+                            <div class="text-center text-gray-500 dark:text-gray-400"> 
+                                <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="assets/img/esat.png" alt="Avatar"> 
+                                <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> 
+                                    <a href="https://www.linkedin.com/in/estawky/">Esat</a> </h3> <p>Teknoloji Yöneticisi</p>
+                                    
+
+                                    <ul class="flex justify-center mt-4 space-x-4"> 
+                                        <li> 
+                                            <a href="https://www.linkedin.com/in/estawky/" class="m-2 text-[#0C64C5] hover:text-gray-900 dark:hover:text-white"> <i class="bi-linkedin"></i></a> 
+                                            <a href="https://github.com/estawky" class="m-2 text-[#222] dark:text-[#FFF] hover:text-gray-500 dark:hover:text-gray-500"> <i class="bi-github"></i> </a> 
+                                        </li>
+                                    </ul> 
+                                </div>
+                                <div class="text-center text-gray-500 dark:text-gray-400"> 
+                                    <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="assets/img/burak.jpg" alt="Avatar"> 
+                                    <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> <a href="https://www.linkedin.com/in/burak-kabada%C5%9F-24a6bb232/">Burak</a> </h3> <p>Finans Yöneticisi</p>
+                                    
+
+                                    <ul class="flex justify-center mt-4 space-x-4"> 
+                                        <li> 
+                                            <a href="https://www.linkedin.com/in/burak-kabada%C5%9F-24a6bb232/" class="m-2 text-[#0C64C5] hover:text-gray-900 dark:hover:text-white"> <i class="bi-linkedin"></i> </a> 
+                                        </li>
+                                    </ul> 
+                                </div>
+                                <div class="text-center text-gray-500 dark:text-gray-400"> 
+                                    <img class="mx-auto mb-4 w-36 h-36 rounded-full" src="assets/img/eren.png" alt="Avatar"> 
+                                    <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> 
+                                        <a href="https://www.linkedin.com/in/eren0meri%C3%A7/">Eren</a> </h3> <p>Güvenlik Yöneticisi</p>
+                                        
+                                        <ul class="flex justify-center mt-4 space-x-4"> 
+                                            <li> 
+                                                <a href="https://www.linkedin.com/in/eren0meri%C3%A7/" class="m-2 text-[#0C64C5] hover:text-gray-900 dark:hover:text-white"> <i class="bi-linkedin"></i> </a> 
+                                                <a href="https://github.com/0Chewbaca" class="m-2 text-[#222] dark:text-[#FFF] hover:text-gray-500 dark:hover:text-gray-500"> <i class="bi-github"></i> 
+                                                </a> 
+                                            </li>
+                                        </ul> 
+                                    </div>
+                                </div>
+                            </div>
+                        </section> 
+                        <section class="bg-white dark:bg-gray-900" id="faq"> 
+                            <div class="delay-[600ms] duration-[1000ms] [animation-iteration-count:infinite] taos:translate-y-[200px] taos:opacity-0 py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6"> 
+                                <h2 class="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Sıkça sorulan sorular</h2> 
+                                <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2"> <div> 
+                                    <div class="mb-10"> 
+                                        <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white"> 
+                                    <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd">
+                                        </path>
+                                    </svg> KOLAY Nedir? </h3> 
+                                    <p class="text-gray-500 dark:text-gray-400">KOLAY özel ders hizmeti veren öğretmenler ve özel ders hizmeti alan öğrenciler için yardım asistanıdır. Kolay sayesinde öğretmenler ders takibi, ödeme takibi, ödev takibi gibi zahmetli işleri uygulama aracılığıyla kolayca hallediyorlar.</p>
+                                </div>
+                            </div>
+                            <div> 
+                                <div class="mb-10"> 
+                                    <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white"> <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd">
+                                        </path>
+                                    </svg> Yatırımcılardan bekletiniz nedir? </h3> 
+                                    <p class="text-gray-500 dark:text-gray-400">Sizlerden beklentilerimiz öncelikle bizlere manevi açıdan destek olmanız çünkü hepimiz çok istekli ve hırslıyız. Diğer açılardan ise ilk olarak birlikte çalışabileceğimiz evimiz gibi hissedeceğimiz bir ofise ihtiyacımız var. Ardından uygulamamız için server hizmetine ve maliyetler için bir miktar hibeye ihtiyacımız var. Ve son olarak bizleri uygulamamızı tanıtacağımız ve girişimimizin geleceği için yatırımlar alacağımız yatırımcılarla görüştümenize ihtiyacımız var.</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-10"> 
+                                    <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white"> 
+                                        <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> 
+                                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path> 
+                                        </svg> Girişimi gerçekleştirme ve geliştirme konusunda ekip becerileriniz nedir? </h3> <p class="text-gray-500 dark:text-gray-400">Ekibimiz alanında deneyimli ve istekli kişilerden oluşmakta ve hepimizin kendi alanında sertifika ve projeleri bulunmaktadır.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mb-10"> 
+                                        <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white"> 
+                                            <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> 
+                                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path> 
+                                            </svg> Girişimimizin yenilikçi yönü nedir? </h3> <p class="text-gray-500 dark:text-gray-400">Girişimimiz yaşanan sorunlara çözüm bulma yönleriyle pazara yenilik katmakta çünkü şuanda öğretmenler ders ve ödeme kayıtlarını ya arşiv defterlerine ya da exel benzeri uygulamalarla kaydetmekte ama bizim uygulamamızla hem çağa uygun yöntemlerle kayıtlarını almakta ve planlamalarını yapmaktadırlar. Ayrıca öğrencilerle eş zamanlı olarak ilerleyebilmektedirler.</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="mb-10"> <h3 class="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white"> 
+                                            <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> 
+                                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path> 
+                                            </svg> Girişimimiz için şu ana kadar ne gibi çalışmalar gerçekleştirdik? </h3> <p class="text-gray-500 dark:text-gray-400">Özel ders veren öğretmenlere görüşmeler gerçekleştirip onların ihtiyaç ve görüşlerine göre girişimimizin ana özelliklerini ve hedef kitlesini belirledik. Uygulamamızın prototip tasarımını bitirdik. Yazılımı için çalışmalara başladık.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800"> 
+                            <div class="mx-auto max-w-screen-xl text-center"> 
+                                <p class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"> 
+                                    <img class="w-12 h-12 mr-2" src="assets/img/logo.png" alt="Logo"> <b>Kolay</b> </p>
+                                    <p class="my-6 text-gray-500 dark:text-gray-400">Özel ders vermenin <span class="text-transparent bg-clip-text bg-gradient-to-r to-green-600 from-green-400">Kolayı</span> var. <br><span class="text-transparent bg-clip-text bg-gradient-to-r to-green-600 from-green-400">KOLAY</span> özel ders hizmeti veren öğretmenler ve özel ders hizmeti alan öğrenciler için yardım asistanıdır. </p>
+                                    <p class="my-6 text-gray-500 dark:text-gray-400"><i class="bi bi-envelope-fill"></i> 
+                                        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="127b7c747d52797d7e736b7362623c717d7f3c6660">[email&#160;protected]</a>
+                                    </p>
+                                    
+                                    <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white"> 
+                                        <li> 
+                                            <a href="/" class="mr-4 hover:underline md:mr-6 ">Ana Sayfa</a> 
+                                        </li>
+                                        <li> 
+                                            <a href="#faq" class="mr-4 hover:underline md:mr-6">S.S.S</a> 
+                                        </li>
+                                        <li> 
+                                            <a href="#team" class="mr-4 hover:underline md:mr-6 ">Ekibimiz</a> 
+                                        </li>
+                                        <li> 
+                                            <a href="#info" class="mr-4 hover:underline md:mr-6">Bilgi alın</a> 
+                                        </li>
+                                        <li> 
+                                            <a href="https://devs.org.tr" class="mr-4 hover:underline md:mr-6 ">Devs</a> 
+                                        </li>
+                                    </ul> 
+                                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a class="text-transparent bg-clip-text bg-gradient-to-r to-green-600 from-green-400" href="https://kolayapp.com.tr" class="hover:underline">Kolay™</a>. Tüm hakları saklıdır.</span> 
+                                </div>
+                            </footer>
+
+
+
+                            <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                            <script>
+                            var themeToggleDarkIcon=document.getElementById('theme-toggle-dark-icon');var themeToggleLightIcon=document.getElementById('theme-toggle-light-icon');if (localStorage.getItem('color-theme')==='dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){themeToggleLightIcon.classList.remove('hidden');}else{themeToggleDarkIcon.classList.remove('hidden');}var themeToggleBtn=document.getElementById('theme-toggle');themeToggleBtn.addEventListener('click', function(){themeToggleDarkIcon.classList.toggle('hidden'); themeToggleLightIcon.classList.toggle('hidden'); if (localStorage.getItem('color-theme')){if (localStorage.getItem('color-theme')==='light'){document.documentElement.classList.add('dark'); localStorage.setItem('color-theme', 'dark');}else{document.documentElement.classList.remove('dark'); localStorage.setItem('color-theme', 'light');}}else{if (document.documentElement.classList.contains('dark')){document.documentElement.classList.remove('dark'); localStorage.setItem('color-theme', 'light');}else{document.documentElement.classList.add('dark'); localStorage.setItem('color-theme', 'dark');}}});
+                            </script>
+                            <script>document.documentElement.classList.add('js')</script>
+                            <script src="https://unpkg.com/taos@1.0.2/dist/taos.js"></script>
+                        </body>
